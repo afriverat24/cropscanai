@@ -6,12 +6,11 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: false,
     rollupOptions: {
-      input: {
-        main: './index.html'
-      }
+      external: []
     }
   },
-  base: './'
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  }
 })
